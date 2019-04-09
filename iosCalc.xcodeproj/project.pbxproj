@@ -35,6 +35,8 @@
 		675A79B8225C7323000BCF6B /* CalcCommand.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CalcCommand.hpp; sourceTree = "<group>"; };
 		675A79B9225C7323000BCF6B /* CalcException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CalcException.hpp; sourceTree = "<group>"; };
 		675A79BA225C7323000BCF6B /* Calculator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Calculator.hpp; sourceTree = "<group>"; };
+		675A79C0225C8A9D000BCF6B /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		675A79C1225C8AAC000BCF6B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,8 @@
 		675A798F225C72B6000BCF6B = {
 			isa = PBXGroup;
 			children = (
+				675A79C1225C8AAC000BCF6B /* README.md */,
+				675A79C0225C8A9D000BCF6B /* LICENSE */,
 				675A79B1225C7306000BCF6B /* cppCalc */,
 				675A799A225C72B6000BCF6B /* iosCalcUI */,
 				675A7999225C72B6000BCF6B /* Products */,
