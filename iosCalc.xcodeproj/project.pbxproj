@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				675A79B1225C7306000BCF6B /* cppCalc */,
-				675A799A225C72B6000BCF6B /* Calc */,
+				675A799A225C72B6000BCF6B /* iosCalcUI */,
 				675A7999225C72B6000BCF6B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,7 +65,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		675A799A225C72B6000BCF6B /* Calc */ = {
+		675A799A225C72B6000BCF6B /* iosCalcUI */ = {
 			isa = PBXGroup;
 			children = (
 				675A799B225C72B6000BCF6B /* AppDelegate.h */,
@@ -78,7 +78,7 @@
 				675A79A9225C72BA000BCF6B /* Info.plist */,
 				675A79AA225C72BA000BCF6B /* main.m */,
 			);
-			path = Calc;
+			path = iosCalcUI;
 			sourceTree = "<group>";
 		};
 		675A79B1225C7306000BCF6B /* cppCalc */ = {
@@ -144,7 +144,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 675A7993225C72B6000BCF6B /* Build configuration list for PBXProject "Calc" */;
+			buildConfigurationList = 675A7993225C72B6000BCF6B /* Build configuration list for PBXProject "iosCalc" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -360,7 +360,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		675A7993225C72B6000BCF6B /* Build configuration list for PBXProject "Calc" */ = {
+		675A7993225C72B6000BCF6B /* Build configuration list for PBXProject "iosCalc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				675A79AC225C72BA000BCF6B /* Debug */,
