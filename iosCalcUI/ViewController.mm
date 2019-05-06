@@ -88,7 +88,7 @@ const UIColor* TEXT_COLOR = [UIColor colorWithRed:0.933 green:0.933 blue:0.933 a
 }
 
 - (void)updateResultField {
-    self.resultLabel.text = [NSString stringWithCString:calculator.getCurrentInput().c_str() encoding:NSUTF8StringEncoding];
+    self.resultLabel.text = [NSString stringWithCString:calculator.getResult().c_str() encoding:NSUTF8StringEncoding];
 }
 
 - (void)makeOpButtonInactive:(char)op {
@@ -155,118 +155,118 @@ const UIColor* TEXT_COLOR = [UIColor colorWithRed:0.933 green:0.933 blue:0.933 a
 #pragma mark Calculator related methods
 
 - (IBAction)onDigit0Tapped:(id)sender {
-    calculator.updateInputByCommand(CalcCommand::makeDigitInput('0'));
+    calculator.makeInput(Calculator::Command::Zero);
     [self setClearResetButtonTextToC];
     [self updateCalculatorResultDisplay];
 }
 
 - (IBAction)onDigit1Tapped:(id)sender {
-    calculator.updateInputByCommand(CalcCommand::makeDigitInput('1'));
+    calculator.makeInput(Calculator::Command::One);
     [self setClearResetButtonTextToC];
     [self updateCalculatorResultDisplay];
 }
 
 - (IBAction)onDigit2Tapped:(id)sender {
-    calculator.updateInputByCommand(CalcCommand::makeDigitInput('2'));
+    calculator.makeInput(Calculator::Command::Two);
     [self setClearResetButtonTextToC];
     [self updateCalculatorResultDisplay];
 }
 
 - (IBAction)onDigit3Tapped:(id)sender {
-    calculator.updateInputByCommand(CalcCommand::makeDigitInput('3'));
+    calculator.makeInput(Calculator::Command::Three);
     [self setClearResetButtonTextToC];
     [self updateCalculatorResultDisplay];
 }
 
 - (IBAction)onDigit4Tapped:(id)sender {
-    calculator.updateInputByCommand(CalcCommand::makeDigitInput('4'));
+    calculator.makeInput(Calculator::Command::Four);
     [self setClearResetButtonTextToC];
     [self updateCalculatorResultDisplay];
 }
 
 - (IBAction)onDigit5Tapped:(id)sender {
-    calculator.updateInputByCommand(CalcCommand::makeDigitInput('5'));
+    calculator.makeInput(Calculator::Command::Five);
     [self setClearResetButtonTextToC];
     [self updateCalculatorResultDisplay];
 }
 
 - (IBAction)onDigit6Tapped:(id)sender {
-    calculator.updateInputByCommand(CalcCommand::makeDigitInput('6'));
+    calculator.makeInput(Calculator::Command::Six);
     [self setClearResetButtonTextToC];
     [self updateCalculatorResultDisplay];
 }
 
 - (IBAction)onDigit7Tapped:(id)sender {
-    calculator.updateInputByCommand(CalcCommand::makeDigitInput('7'));
+    calculator.makeInput(Calculator::Command::Seven);
     [self setClearResetButtonTextToC];
     [self updateCalculatorResultDisplay];
 }
 
 - (IBAction)onDigit8Tapped:(id)sender {
-    calculator.updateInputByCommand(CalcCommand::makeDigitInput('8'));
+    calculator.makeInput(Calculator::Command::Eight);
     [self setClearResetButtonTextToC];
     [self updateCalculatorResultDisplay];
 }
 
 - (IBAction)onDigit9Tapped:(id)sender {
-    calculator.updateInputByCommand(CalcCommand::makeDigitInput('9'));
+    calculator.makeInput(Calculator::Command::Nine);
     [self setClearResetButtonTextToC];
     [self updateCalculatorResultDisplay];
 }
 
 - (IBAction)onDecimalPointTapped:(id)sender {
-    calculator.updateInputByCommand(CalcCommand::makeDecimalPointInput());
+    calculator.makeInput(Calculator::Command::DecimalPoint);
     [self setClearResetButtonTextToC];
     [self updateCalculatorResultDisplay];
 }
 
 - (IBAction)onEvalTapped:(id)sender {
-    calculator.updateInputByCommand(CalcCommand::makeEvalInput());
+    calculator.makeInput(Calculator::Command::Eval);
     [self setClearResetButtonTextToC];
     [self updateCalculatorResultDisplay];
 }
 
 - (IBAction)onPlusTapped:(id)sender {
-    calculator.updateInputByCommand(CalcCommand::makePlusInput());
+    calculator.makeInput(Calculator::Command::Plus);
     [self setClearResetButtonTextToC];
     [self updateCalculatorResultDisplay];
 }
 
 - (IBAction)onMinusTapped:(id)sender {
-    calculator.updateInputByCommand(CalcCommand::makeMinusInput());
+    calculator.makeInput(Calculator::Command::Minus);
     [self setClearResetButtonTextToC];
     [self updateCalculatorResultDisplay];
 }
 
 - (IBAction)onMultiplyTapped:(id)sender {
-    calculator.updateInputByCommand(CalcCommand::makeMultiplyInput());
+    calculator.makeInput(Calculator::Command::Multiply);
     [self setClearResetButtonTextToC];
     [self updateCalculatorResultDisplay];
 }
 
 - (IBAction)onDivideTapped:(id)sender {
-    calculator.updateInputByCommand(CalcCommand::makeDiviseInput());
+    calculator.makeInput(Calculator::Command::Divide);
     [self setClearResetButtonTextToC];
     [self updateCalculatorResultDisplay];
 }
 
 - (IBAction)onPercentTapped:(id)sender {
-    calculator.updateInputByCommand(CalcCommand::makePercentInput());
+    calculator.makeInput(Calculator::Command::Percent);
     [self setClearResetButtonTextToC];
     [self updateCalculatorResultDisplay];
 }
 
 - (IBAction)onNegateTapped:(id)sender {
-    calculator.updateInputByCommand(CalcCommand::makeNegateInput());
+    calculator.makeInput(Calculator::Command::Negate);
     [self setClearResetButtonTextToC];
     [self updateCalculatorResultDisplay];
 }
 
 - (IBAction)onACTapped:(id)sender {
     if ([self.resultLabel.text isEqualToString:@"0"]) {
-        calculator.updateInputByCommand(CalcCommand::makeResetInput());
+        calculator.makeInput(Calculator::Command::Reset);
     } else {
-        calculator.updateInputByCommand(CalcCommand::makeClearInput());
+        calculator.makeInput(Calculator::Command::Clear);
     }
     [self setClearResetButtonTextToAC];
     [self updateCalculatorResultDisplay];

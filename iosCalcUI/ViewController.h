@@ -10,8 +10,6 @@
 #import <objc/runtime.h>
 
 #import "../cppCalc/include/Calculator.hpp"
-#import "../cppCalc/include/CalcCommand.hpp"
-#import "../cppCalc/include/CalcException.hpp"
 
 @interface ViewController : UIViewController
 

@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		670FC9472280E453008F9C74 /* Calculator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 670FC9462280E453008F9C74 /* Calculator.cpp */; };
 		675A799D225C72B6000BCF6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 675A799C225C72B6000BCF6B /* AppDelegate.m */; };
 		675A79A0225C72B6000BCF6B /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 675A799F225C72B6000BCF6B /* ViewController.mm */; };
 		675A79A3225C72B6000BCF6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 675A79A1225C72B6000BCF6B /* Main.storyboard */; };
 		675A79A5225C72BA000BCF6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 675A79A4225C72BA000BCF6B /* Assets.xcassets */; };
 		675A79A8225C72BA000BCF6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 675A79A6225C72BA000BCF6B /* LaunchScreen.storyboard */; };
 		675A79AB225C72BA000BCF6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 675A79AA225C72BA000BCF6B /* main.m */; };
-		675A79BB225C7323000BCF6B /* Calculator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 675A79B3225C7323000BCF6B /* Calculator.cpp */; };
-		675A79BC225C7323000BCF6B /* CalcException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 675A79B4225C7323000BCF6B /* CalcException.cpp */; };
-		675A79BD225C7323000BCF6B /* CalcCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 675A79B5225C7323000BCF6B /* CalcCommand.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		670FC9452280E43B008F9C74 /* Calculator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Calculator.hpp; sourceTree = "<group>"; };
+		670FC9462280E453008F9C74 /* Calculator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Calculator.cpp; sourceTree = "<group>"; };
 		675A7998225C72B6000BCF6B /* Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		675A799B225C72B6000BCF6B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		675A799C225C72B6000BCF6B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,12 +29,6 @@
 		675A79A7225C72BA000BCF6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		675A79A9225C72BA000BCF6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		675A79AA225C72BA000BCF6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		675A79B3225C7323000BCF6B /* Calculator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Calculator.cpp; sourceTree = "<group>"; };
-		675A79B4225C7323000BCF6B /* CalcException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CalcException.cpp; sourceTree = "<group>"; };
-		675A79B5225C7323000BCF6B /* CalcCommand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CalcCommand.cpp; sourceTree = "<group>"; };
-		675A79B8225C7323000BCF6B /* CalcCommand.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CalcCommand.hpp; sourceTree = "<group>"; };
-		675A79B9225C7323000BCF6B /* CalcException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CalcException.hpp; sourceTree = "<group>"; };
-		675A79BA225C7323000BCF6B /* Calculator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Calculator.hpp; sourceTree = "<group>"; };
 		675A79C0225C8A9D000BCF6B /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		675A79C1225C8AAC000BCF6B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,9 +91,7 @@
 		675A79B2225C7323000BCF6B /* src */ = {
 			isa = PBXGroup;
 			children = (
-				675A79B3225C7323000BCF6B /* Calculator.cpp */,
-				675A79B4225C7323000BCF6B /* CalcException.cpp */,
-				675A79B5225C7323000BCF6B /* CalcCommand.cpp */,
+				670FC9462280E453008F9C74 /* Calculator.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -107,9 +99,7 @@
 		675A79B7225C7323000BCF6B /* include */ = {
 			isa = PBXGroup;
 			children = (
-				675A79B8225C7323000BCF6B /* CalcCommand.hpp */,
-				675A79B9225C7323000BCF6B /* CalcException.hpp */,
-				675A79BA225C7323000BCF6B /* Calculator.hpp */,
+				670FC9452280E43B008F9C74 /* Calculator.hpp */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -185,9 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				675A79A0225C72B6000BCF6B /* ViewController.mm in Sources */,
-				675A79BB225C7323000BCF6B /* Calculator.cpp in Sources */,
-				675A79BD225C7323000BCF6B /* CalcCommand.cpp in Sources */,
-				675A79BC225C7323000BCF6B /* CalcException.cpp in Sources */,
+				670FC9472280E453008F9C74 /* Calculator.cpp in Sources */,
 				675A79AB225C72BA000BCF6B /* main.m in Sources */,
 				675A799D225C72B6000BCF6B /* AppDelegate.m in Sources */,
 			);
