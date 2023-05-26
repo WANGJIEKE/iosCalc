@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,37 +13,45 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XwV-dj-Gl7" userLabel="Result Label">
-                                <rect key="frame" x="15" y="117.5" width="345" height="86"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XwV-dj-Gl7" userLabel="Result Label">
+                                <rect key="frame" x="15" y="279.66666666666669" width="400" height="86"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="72"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="FWx-2h-JEg" appends="YES" id="AYH-Wr-I3Q"/>
+                                    <outletCollection property="gestureRecognizers" destination="tkj-HC-lLd" appends="YES" id="PmY-KO-EwO"/>
+                                </connections>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RVL-qd-swc" userLabel="Buttons Stack View">
-                                <rect key="frame" x="15" y="213.5" width="345" height="433.5"/>
+                                <rect key="frame" x="15" y="375.66666666666674" width="400" height="502.33333333333326"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="csA-qc-B9H" userLabel="First Row">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="78.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="92.333333333333329"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44l-qd-KQW" userLabel="Clear Button" customClass="CalculatorUIButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="79" height="78.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44l-qd-KQW" userLabel="Clear Button" customClass="CalculatorClearButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="92.666666666666671" height="92.333333333333329"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="44l-qd-KQW" secondAttribute="height" multiplier="1:1" id="Hgl-Xk-zNk"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="AC" cornerStyle="capsule">
-                                                    <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="35"/>
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
                                                     <color key="baseBackgroundColor" systemColor="tertiaryLabelColor"/>
                                                 </buttonConfiguration>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAC" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onClearButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tav-Of-p5Z"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trA-7F-8Ty" userLabel="Negate Button" customClass="CalculatorUIButton">
-                                                <rect key="frame" x="89" y="0.0" width="78.5" height="78.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trA-7F-8Ty" userLabel="Negate Button">
+                                                <rect key="frame" x="102.66666666666669" y="0.0" width="92.333333333333314" height="92.333333333333329"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="trA-7F-8Ty" secondAttribute="height" multiplier="1:1" id="JoK-Z2-PKR"/>
                                                 </constraints>
@@ -52,12 +60,12 @@
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
                                                     <color key="baseBackgroundColor" systemColor="tertiaryLabelColor"/>
                                                 </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onNegateButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q2e-R1-L9v"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzL-p4-s4n" userLabel="Percentage Button" customClass="CalculatorUIButton">
-                                                <rect key="frame" x="177.5" y="0.0" width="79" height="78.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzL-p4-s4n" userLabel="Percentage Button">
+                                                <rect key="frame" x="205" y="0.0" width="92.666666666666686" height="92.333333333333329"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="qzL-p4-s4n" secondAttribute="height" multiplier="1:1" id="729-Fc-OQ0"/>
                                                 </constraints>
@@ -66,23 +74,24 @@
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
                                                     <color key="baseBackgroundColor" systemColor="tertiaryLabelColor"/>
                                                 </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onPercentageButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rQ1-pH-kDO"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVl-FF-dlH" userLabel="Division Button" customClass="CalculatorUIButton">
-                                                <rect key="frame" x="266.5" y="0.0" width="78.5" height="78.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVl-FF-dlH" userLabel="Division Button" customClass="CalculatorOperatorButton">
+                                                <rect key="frame" x="307.66666666666669" y="0.0" width="92.333333333333314" height="92.333333333333329"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="dVl-FF-dlH" secondAttribute="height" multiplier="1:1" id="2H1-ql-1Ju"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="÷" cornerStyle="capsule">
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="baseBackgroundColor" name="AccentColor"/>
                                                 </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onOperatiorButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="220-PD-MpV"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -95,10 +104,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tnE-JA-x4c" userLabel="Second Row">
-                                        <rect key="frame" x="0.0" y="88.5" width="345" height="79"/>
+                                        <rect key="frame" x="0.0" y="102.33333333333331" width="400" height="92.666666666666686"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AH4-ae-W9o" userLabel="7 Button" customClass="CalculatorUIButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="79" height="79"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AH4-ae-W9o" userLabel="7 Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="92.666666666666671" height="92.666666666666671"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="AH4-ae-W9o" secondAttribute="height" multiplier="1:1" id="Nlz-9X-zdm"/>
                                                 </constraints>
@@ -107,12 +116,12 @@
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
                                                     <color key="baseBackgroundColor" systemColor="secondaryLabelColor"/>
                                                 </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onDigitButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y7i-6X-8H8"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHl-dG-plJ" userLabel="8 Button" customClass="CalculatorUIButton">
-                                                <rect key="frame" x="89" y="0.0" width="78.5" height="79"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHl-dG-plJ" userLabel="8 Button">
+                                                <rect key="frame" x="102.66666666666669" y="0.0" width="92.333333333333314" height="92.666666666666671"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="GHl-dG-plJ" secondAttribute="height" multiplier="1:1" id="Xtg-sZ-zWP"/>
                                                 </constraints>
@@ -121,12 +130,12 @@
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
                                                     <color key="baseBackgroundColor" systemColor="secondaryLabelColor"/>
                                                 </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onDigitButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b47-cb-BAe"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKG-hw-4ax" userLabel="9 Button" customClass="CalculatorUIButton">
-                                                <rect key="frame" x="177.5" y="0.0" width="79" height="79"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKG-hw-4ax" userLabel="9 Button">
+                                                <rect key="frame" x="205" y="0.0" width="92.666666666666686" height="92.666666666666671"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="SKG-hw-4ax" secondAttribute="height" multiplier="1:1" id="uD4-5m-Zp5"/>
                                                 </constraints>
@@ -135,12 +144,12 @@
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
                                                     <color key="baseBackgroundColor" systemColor="secondaryLabelColor"/>
                                                 </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onDigitButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dPb-qd-GZx"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qod-3C-NYi" userLabel="Multiplication Button" customClass="CalculatorUIButton">
-                                                <rect key="frame" x="266.5" y="0.0" width="78.5" height="79"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qod-3C-NYi" userLabel="Multiplication Button" customClass="CalculatorOperatorButton">
+                                                <rect key="frame" x="307.66666666666669" y="0.0" width="92.333333333333314" height="92.666666666666671"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="qod-3C-NYi" secondAttribute="height" multiplier="1:1" id="QxY-PT-3dS"/>
                                                 </constraints>
@@ -149,9 +158,9 @@
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
                                                     <color key="baseBackgroundColor" name="AccentColor"/>
                                                 </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onOperatiorButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="856-Bx-Qgu"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -164,10 +173,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kT0-uZ-pUn" userLabel="Third Row">
-                                        <rect key="frame" x="0.0" y="177.5" width="345" height="78.5"/>
+                                        <rect key="frame" x="0.0" y="204.99999999999994" width="400" height="92.333333333333314"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGY-sK-vIY" userLabel="4 Button" customClass="CalculatorUIButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="79" height="78.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGY-sK-vIY" userLabel="4 Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="92.666666666666671" height="92.333333333333329"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="UGY-sK-vIY" secondAttribute="height" multiplier="1:1" id="IPk-Fv-NXc"/>
                                                 </constraints>
@@ -176,12 +185,12 @@
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
                                                     <color key="baseBackgroundColor" systemColor="secondaryLabelColor"/>
                                                 </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onDigitButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VrH-Bz-C6Y"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rI2-gJ-zlO" userLabel="5 Button" customClass="CalculatorUIButton">
-                                                <rect key="frame" x="89" y="0.0" width="78.5" height="78.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rI2-gJ-zlO" userLabel="5 Button">
+                                                <rect key="frame" x="102.66666666666669" y="0.0" width="92.333333333333314" height="92.333333333333329"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="rI2-gJ-zlO" secondAttribute="height" multiplier="1:1" id="yg2-S9-KbK"/>
                                                 </constraints>
@@ -190,12 +199,12 @@
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
                                                     <color key="baseBackgroundColor" systemColor="secondaryLabelColor"/>
                                                 </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onDigitButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p8z-8U-acG"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APj-hN-8FA" userLabel="6 Button" customClass="CalculatorUIButton">
-                                                <rect key="frame" x="177.5" y="0.0" width="79" height="78.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APj-hN-8FA" userLabel="6 Button">
+                                                <rect key="frame" x="205" y="0.0" width="92.666666666666686" height="92.333333333333329"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="APj-hN-8FA" secondAttribute="height" multiplier="1:1" id="pEs-UU-0oM"/>
                                                 </constraints>
@@ -204,12 +213,12 @@
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
                                                     <color key="baseBackgroundColor" systemColor="secondaryLabelColor"/>
                                                 </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onDigitButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fht-wJ-Qnm"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtC-Lk-DSN" userLabel="Subtraction Button" customClass="CalculatorUIButton">
-                                                <rect key="frame" x="266.5" y="0.0" width="78.5" height="78.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtC-Lk-DSN" userLabel="Subtraction Button" customClass="CalculatorOperatorButton">
+                                                <rect key="frame" x="307.66666666666669" y="0.0" width="92.333333333333314" height="92.333333333333329"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="rtC-Lk-DSN" secondAttribute="height" multiplier="1:1" id="j1s-GY-ZdD"/>
                                                 </constraints>
@@ -218,9 +227,9 @@
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
                                                     <color key="baseBackgroundColor" name="AccentColor"/>
                                                 </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onOperatiorButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J3e-Qf-0Xd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -233,10 +242,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ria-Ao-NoH" userLabel="Fourth Row">
-                                        <rect key="frame" x="0.0" y="266" width="345" height="79"/>
+                                        <rect key="frame" x="0.0" y="307.33333333333331" width="400" height="92.666666666666686"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZE-nF-4tK" userLabel="1 Button" customClass="CalculatorUIButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="79" height="79"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZE-nF-4tK" userLabel="1 Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="92.666666666666671" height="92.666666666666671"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="NZE-nF-4tK" secondAttribute="height" multiplier="1:1" id="MKO-cA-Yj7"/>
                                                 </constraints>
@@ -245,12 +254,12 @@
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
                                                     <color key="baseBackgroundColor" systemColor="secondaryLabelColor"/>
                                                 </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onDigitButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gxx-Hf-3YY"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHU-JD-Qpo" userLabel="2 Button" customClass="CalculatorUIButton">
-                                                <rect key="frame" x="89" y="0.0" width="78.5" height="79"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHU-JD-Qpo" userLabel="2 Button">
+                                                <rect key="frame" x="102.66666666666669" y="0.0" width="92.333333333333314" height="92.666666666666671"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="VHU-JD-Qpo" secondAttribute="height" multiplier="1:1" id="Ksa-zJ-y2q"/>
                                                 </constraints>
@@ -259,12 +268,12 @@
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
                                                     <color key="baseBackgroundColor" systemColor="secondaryLabelColor"/>
                                                 </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onDigitButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nlh-fy-t3I"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cE4-o0-DBq" userLabel="3 Button" customClass="CalculatorUIButton">
-                                                <rect key="frame" x="177.5" y="0.0" width="79" height="79"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cE4-o0-DBq" userLabel="3 Button">
+                                                <rect key="frame" x="205" y="0.0" width="92.666666666666686" height="92.666666666666671"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="cE4-o0-DBq" secondAttribute="height" multiplier="1:1" id="PFg-e4-2zF"/>
                                                 </constraints>
@@ -273,12 +282,12 @@
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
                                                     <color key="baseBackgroundColor" systemColor="secondaryLabelColor"/>
                                                 </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onDigitButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NdZ-vx-UUi"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMb-f7-t9B" userLabel="Addition Button" customClass="CalculatorUIButton">
-                                                <rect key="frame" x="266.5" y="0.0" width="78.5" height="79"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMb-f7-t9B" userLabel="Addition Button" customClass="CalculatorOperatorButton">
+                                                <rect key="frame" x="307.66666666666669" y="0.0" width="92.333333333333314" height="92.666666666666671"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="DMb-f7-t9B" secondAttribute="height" multiplier="1:1" id="BoH-ap-2ra"/>
                                                 </constraints>
@@ -287,9 +296,9 @@
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
                                                     <color key="baseBackgroundColor" name="AccentColor"/>
                                                 </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onOperatiorButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tEN-q6-q3b"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -302,40 +311,40 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XcQ-Ez-pyy" userLabel="Fifth Row">
-                                        <rect key="frame" x="0.0" y="355" width="345" height="78.5"/>
+                                        <rect key="frame" x="0.0" y="409.99999999999994" width="400" height="92.333333333333314"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMD-Ca-d1E" userLabel="0 Button" customClass="CalculatorUIButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="78.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMD-Ca-d1E" userLabel="0 Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="195" height="92.333333333333329"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="0" cornerStyle="capsule">
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
                                                     <color key="baseBackgroundColor" systemColor="secondaryLabelColor"/>
                                                 </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onDigitButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SBJ-bB-Zyo"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3V3-gQ-jVT" userLabel="Decimal Pont Button" customClass="CalculatorUIButton">
-                                                <rect key="frame" x="177.5" y="0.0" width="79" height="78.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3V3-gQ-jVT" userLabel="Decimal Pont Button">
+                                                <rect key="frame" x="205" y="0.0" width="92.666666666666686" height="92.333333333333329"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="." cornerStyle="capsule">
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
                                                     <color key="baseBackgroundColor" systemColor="secondaryLabelColor"/>
                                                 </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onDecimalPointButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q2X-wi-N6a"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5V-ey-wh0" userLabel="Equal Button" customClass="CalculatorUIButton">
-                                                <rect key="frame" x="266.5" y="0.0" width="78.5" height="78.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5V-ey-wh0" userLabel="Equal Button">
+                                                <rect key="frame" x="307.66666666666669" y="0.0" width="92.333333333333314" height="92.333333333333329"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="=" cornerStyle="capsule">
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="35"/>
                                                     <color key="baseBackgroundColor" name="AccentColor"/>
                                                 </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onEqualButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mji-zE-GI5"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -361,67 +370,35 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="FWx-2h-JEg" userLabel="Right Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="onResultLabelSwipe:" destination="BYZ-38-t0r" id="I2m-tz-0RH"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="tkj-HC-lLd" userLabel="Left Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="onResultLabelSwipe:" destination="BYZ-38-t0r" id="AKi-BM-QVI"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
     </scenes>
     <designables>
-        <designable name="3V3-gQ-jVT">
-            <size key="intrinsicContentSize" width="32.5" height="56"/>
-        </designable>
         <designable name="44l-qd-KQW">
-            <size key="intrinsicContentSize" width="70.5" height="56"/>
-        </designable>
-        <designable name="AH4-ae-W9o">
-            <size key="intrinsicContentSize" width="44" height="56"/>
-        </designable>
-        <designable name="APj-hN-8FA">
-            <size key="intrinsicContentSize" width="46.5" height="56"/>
+            <size key="intrinsicContentSize" width="71.333333333333329" height="56"/>
         </designable>
         <designable name="DMb-f7-t9B">
-            <size key="intrinsicContentSize" width="46.5" height="56"/>
-        </designable>
-        <designable name="GHl-dG-plJ">
-            <size key="intrinsicContentSize" width="46" height="56"/>
-        </designable>
-        <designable name="NZE-nF-4tK">
-            <size key="intrinsicContentSize" width="40.5" height="56"/>
-        </designable>
-        <designable name="SKG-hw-4ax">
-            <size key="intrinsicContentSize" width="46.5" height="56"/>
-        </designable>
-        <designable name="UGY-sK-vIY">
-            <size key="intrinsicContentSize" width="46.5" height="56"/>
-        </designable>
-        <designable name="VHU-JD-Qpo">
-            <size key="intrinsicContentSize" width="45" height="56"/>
-        </designable>
-        <designable name="VMD-Ca-d1E">
-            <size key="intrinsicContentSize" width="46.5" height="56"/>
-        </designable>
-        <designable name="cE4-o0-DBq">
-            <size key="intrinsicContentSize" width="46" height="56"/>
+            <size key="intrinsicContentSize" width="46.333333333333336" height="56"/>
         </designable>
         <designable name="dVl-FF-dlH">
-            <size key="intrinsicContentSize" width="46.5" height="56"/>
-        </designable>
-        <designable name="k5V-ey-wh0">
-            <size key="intrinsicContentSize" width="46.5" height="56"/>
+            <size key="intrinsicContentSize" width="46.333333333333336" height="56"/>
         </designable>
         <designable name="qod-3C-NYi">
-            <size key="intrinsicContentSize" width="46.5" height="56"/>
-        </designable>
-        <designable name="qzL-p4-s4n">
-            <size key="intrinsicContentSize" width="54" height="56"/>
-        </designable>
-        <designable name="rI2-gJ-zlO">
-            <size key="intrinsicContentSize" width="45.5" height="56"/>
+            <size key="intrinsicContentSize" width="46.333333333333336" height="56"/>
         </designable>
         <designable name="rtC-Lk-DSN">
-            <size key="intrinsicContentSize" width="40" height="56"/>
-        </designable>
-        <designable name="trA-7F-8Ty">
-            <size key="intrinsicContentSize" width="46.5" height="56"/>
+            <size key="intrinsicContentSize" width="39.666666666666664" height="56"/>
         </designable>
     </designables>
     <resources>

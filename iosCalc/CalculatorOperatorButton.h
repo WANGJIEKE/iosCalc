@@ -1,5 +1,5 @@
 //
-//  CircleButton.h
+//  CalculatorOperatorButton.h
 //  iosCalc
 //
 //  Created by Tongjie Wang on 5/25/23.
@@ -10,7 +10,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 IB_DESIGNABLE
-@interface CalculatorUIButton : UIButton
+@interface CalculatorOperatorButton : UIButton
+
+@property (nonatomic, assign) IBInspectable BOOL isActive;
 
 @end
 
