@@ -10,24 +10,17 @@
 @implementation CalculatorOperatorButton
 
 - (void)setIsActive:(BOOL)isActive {
-    static UIColor *accentColor;
-    static dispatch_once_t token;
-    
-    dispatch_once(&token, ^{
-        accentColor = [UIColor colorNamed:@"AccentColor"];
-    });
-    
     _isActive = isActive;
     
     UIButtonConfiguration *config = self.configuration;
     
     if (self.isActive) {
         config.background.backgroundColor = [UIColor whiteColor];
-        config.background.strokeColor = accentColor;
+        config.background.strokeColor = [UIColor colorNamed:@"AccentColor"];
         config.background.strokeWidth = 3;
-        config.baseForegroundColor = accentColor;
+        config.baseForegroundColor = [UIColor colorNamed:@"AccentColor"];
     } else {
-        config.background.backgroundColor = accentColor;
+        config.background.backgroundColor = [UIColor colorNamed:@"AccentColor"];
         config.background.strokeColor = [UIColor clearColor];
         config.background.strokeWidth = 0;
         config.baseForegroundColor = [UIColor whiteColor];

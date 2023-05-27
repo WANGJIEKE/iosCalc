@@ -368,6 +368,14 @@
                             <constraint firstItem="RVL-qd-swc" firstAttribute="top" secondItem="XwV-dj-Gl7" secondAttribute="bottom" constant="10" id="yDR-B0-F7T"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="DMb-f7-t9B" id="JMf-5U-nek"/>
+                        <outlet property="clearButton" destination="44l-qd-KQW" id="9uS-zL-kq6"/>
+                        <outlet property="divideButton" destination="dVl-FF-dlH" id="f9n-Ba-TSe"/>
+                        <outlet property="multiplyButton" destination="qod-3C-NYi" id="k46-T8-JTn"/>
+                        <outlet property="resultLabel" destination="XwV-dj-Gl7" id="1XV-ih-NGT"/>
+                        <outlet property="subtractButton" destination="rtC-Lk-DSN" id="5QI-pD-ZPT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="FWx-2h-JEg" userLabel="Right Swipe Gesture Recognizer">

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4A115BD2A2175DE00E2E633 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A115BC2A2175DE00E2E633 /* Calculator.m */; };
 		D4C5E4CA2A20002A00E7AEE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C5E4C92A20002A00E7AEE1 /* AppDelegate.m */; };
 		D4C5E4CD2A20002A00E7AEE1 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C5E4CC2A20002A00E7AEE1 /* SceneDelegate.m */; };
 		D4C5E4D02A20002A00E7AEE1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C5E4CF2A20002A00E7AEE1 /* ViewController.m */; };
@@ -19,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D46390792A218CC500B9CB7E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D463907A2A218D2600B9CB7E /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		D4A115BB2A2175DE00E2E633 /* Calculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = SOURCE_ROOT; };
+		D4A115BC2A2175DE00E2E633 /* Calculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = SOURCE_ROOT; };
 		D4C5E4C52A20002A00E7AEE1 /* iosCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C5E4C82A20002A00E7AEE1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D4C5E4C92A20002A00E7AEE1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +56,8 @@
 		D4C5E4BC2A20002A00E7AEE1 = {
 			isa = PBXGroup;
 			children = (
+				D463907A2A218D2600B9CB7E /* LICENSE */,
+				D46390792A218CC500B9CB7E /* README.md */,
 				D4C5E4C72A20002A00E7AEE1 /* iosCalc */,
 				D4C5E4C62A20002A00E7AEE1 /* Products */,
 			);
@@ -82,6 +89,8 @@
 				D4F02A022A201A6F00819DD8 /* CalculatorOperatorButton.m */,
 				D4F460C42A211297001C4AAB /* CalculatorClearButton.h */,
 				D4F460C52A211297001C4AAB /* CalculatorClearButton.m */,
+				D4A115BB2A2175DE00E2E633 /* Calculator.h */,
+				D4A115BC2A2175DE00E2E633 /* Calculator.m */,
 			);
 			path = iosCalc;
 			sourceTree = "<group>";
@@ -159,6 +168,7 @@
 				D4C5E4D02A20002A00E7AEE1 /* ViewController.m in Sources */,
 				D4C5E4CA2A20002A00E7AEE1 /* AppDelegate.m in Sources */,
 				D4C5E4DB2A20002B00E7AEE1 /* main.m in Sources */,
+				D4A115BD2A2175DE00E2E633 /* Calculator.m in Sources */,
 				D4F02A032A201A6F00819DD8 /* CalculatorOperatorButton.m in Sources */,
 				D4C5E4CD2A20002A00E7AEE1 /* SceneDelegate.m in Sources */,
 				D4F460C62A211297001C4AAB /* CalculatorClearButton.m in Sources */,

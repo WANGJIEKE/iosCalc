@@ -7,7 +7,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#import "Calculator.h"
+
+@interface ViewController : UIViewController <CalculatorDelegate>
 
 
 @end
