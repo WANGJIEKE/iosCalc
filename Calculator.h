@@ -33,7 +33,7 @@ typedef NS_ENUM(NSUInteger, CalculatorOp) {
 @property (assign, nonatomic, readonly) CalculatorOp op;
 
 - (instancetype)init;
-- (double)getResult;
+- (double)result;
 - (void)handleCommand:(CalculatorCommand)command;
 
 @end

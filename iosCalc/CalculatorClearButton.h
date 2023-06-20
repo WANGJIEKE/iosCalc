@@ -13,6 +13,7 @@ IB_DESIGNABLE
 @interface CalculatorClearButton : UIButton
 
 @property (nonatomic, assign) IBInspectable BOOL isAC;
+@property (nonatomic, assign) IBInspectable BOOL shouldAdjustFontSizeToFitWidth;
 
 @end
 

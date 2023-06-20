@@ -35,7 +35,7 @@
     return self;
 }
 
-- (double)getResult {
+- (double)result {
     return self.currentOperand.doubleValue;
 }
 

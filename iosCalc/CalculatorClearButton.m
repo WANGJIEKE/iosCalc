@@ -23,4 +23,9 @@
     self.configuration = config;
 }
 
+- (void)setShouldAdjustFontSizeToFitWidth:(BOOL)shouldAdjustFontSizeToFitWidth {
+    _shouldAdjustFontSizeToFitWidth = shouldAdjustFontSizeToFitWidth;
+    self.titleLabel.adjustsFontSizeToFitWidth = _shouldAdjustFontSizeToFitWidth;
+}
+
 @end
